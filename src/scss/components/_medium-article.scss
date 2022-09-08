@@ -1,0 +1,98 @@
+$max-lines: 3;
+$art-lh: 1.2rem;
+
+$wrapper-min-width: 25ch;
+$wrapper-pref-width: 100%;
+$wrapper-max-width: 50ch;
+
+.medium-article-item {
+  display: block;
+  width: clamp($wrapper-min-width, $wrapper-pref-width, $wrapper-max-width);
+  height: 100%;
+  background-image: linear-gradient(
+    160deg,
+    hsl(256, 83%, 38%),
+    hsl(256, 95%, 25%),
+    hsl(273, 100%, 20%)
+  );
+  border-radius: 12px;
+
+  article.medium-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 38px 30px;
+    text-align: justify;
+
+    h2 {
+      width: 100%;
+      color: white;
+      font-size: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    p {
+      position: relative;
+      display: block;
+      height: calc($art-lh * $max-lines);
+      margin: 24px auto;
+      font-size: 14px;
+      font-weight: 100;
+      line-height: $art-lh + 0.1rem;
+      color: white;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: calc($art-lh - 0.3rem);
+        background: linear-gradient(
+          160deg,
+          hsl(256, 83%, 38%, 0) 0%,
+          hsl(256, 83%, 38%, 0.25) 20%,
+          hsla(256, 95%, 25%, 0.5) 40%,
+          hsla(256, 95%, 25%, 0.75) 60%,
+          hsla(273, 100%, 19%, 1) 120%
+        );
+      }
+    }
+
+    .medium-article-links-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+
+      .medium-article-link-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+        padding: 6px 9px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: hsl(256, 83%, 38%, 0);
+        transition: all ease-in 0.2s;
+
+        .medium-article-link {
+          font-size: 14px;
+        }
+        span {
+          margin-left: 7px;
+        }
+        &:hover {
+          border: 1px solid white;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+}

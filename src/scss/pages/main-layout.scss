@@ -1,0 +1,19 @@
+@use "../abstracts/" as abstract;
+@use "../components/" as comp;
+
+body {
+  background-color: rgb(35, 35, 35);
+
+  #app {
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+
+    .app-inner-wrapper {
+      height: 100vh;
+      max-width: 95%;
+      margin: 0 auto;
+      border: 1px dotted black;
+    }
+  }
+}
