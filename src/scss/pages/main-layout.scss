@@ -5,15 +5,21 @@ body {
   background-color: rgb(35, 35, 35);
 
   #app {
-    width: 100vw;
-    max-width: 100vw;
-    overflow: hidden;
-
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
     .app-inner-wrapper {
-      height: 100vh;
-      max-width: 95%;
-      margin: 0 auto;
-      border: 1px dotted black;
+      position: relative;
+      height: 100%;
+      width: 100vw;
+
+      // .app-bootstrap {
+      //   height: 100%;
+      //   max-width: 95%;
+      //   margin: 0 auto;
+      //   border: 1px dotted red;
+      // }
     }
   }
 }
