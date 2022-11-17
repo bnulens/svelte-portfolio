@@ -1,6 +1,7 @@
-``
-<section class="projects outer-wrapper">
-  <div class="projects inner-wrapper">
-    <h4>Projects</h4>
+<section class="c-projects">
+  <div class="o-outer-wrapper">
+    <div class="o-inner-wrapper">
+      <h2>Projects</h2>
+    </div>
   </div>
 </section>
