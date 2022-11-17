@@ -1,0 +1,12 @@
+@use '../tools/index' as *;
+
+.e-main-title {
+    @include define-font-size(title, h1 );
+    
+    &.is-light {
+        @include toggle-color-theme(title, true);
+    }
+    &.is-dark {
+        @include toggle-color-theme(title, false);
+    }
+}
