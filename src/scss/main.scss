@@ -1,1 +1,4 @@
-@use "./pages/" as page;
+@use './settings/index' as settings;
+@use './components/index' as components;
+@use './objects/index' as objects;
+@use './elements/index' as elements;
