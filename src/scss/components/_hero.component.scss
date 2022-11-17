@@ -1,0 +1,60 @@
+@use "../tools/index" as *;
+
+.c-hero {
+    &.has-expandable {
+        &.is-open {
+            overflow-y: scroll;
+        }
+        &.is-closed {
+            overflow-y: hidden;
+        }
+    }
+
+    .o-space {
+        position: relative;
+        @include define-box-dimension(auto, 90vh);
+    
+        .o-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+        
+            @include define-simple-padding(35vh, 15vw);
+    
+            .o-content-left-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                .o-content-left {
+                    
+                    .o-content-left.text {
+                        display: flex;
+                        flex-direction: column;
+                        width: 60%;
+    
+                        p {
+                            line-height: 1.2em;
+                            text-align: justify;
+                            border-bottom: 1px solid grey;
+                            margin-bottom: 6px;
+
+                            @include define-font-size(text, m);
+                            @include define-specific-padding(6px, 0px, 18px);
+                        }
+                        
+                        .o-content-left.buttons {
+                            flex-direction: row;
+                            justify-content: space-between;
+                            width: 50%;
+                            margin: 0 auto;
+
+                            @include define-simple-padding(12px, 0px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
