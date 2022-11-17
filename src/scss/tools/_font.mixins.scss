@@ -1,0 +1,82 @@
+@use '../settings/settings.config' as vars;
+
+// $min: number in px 
+// $pref: number in vw
+// $max: number in px
+@mixin define-clamp-font-size($min, $pref, $max) {
+    font-size: clamp($min, $pref, $max);
+}
+
+// $weight: number in hundreds
+@mixin define-font-weight($weight) {
+    font-weight: $weight
+}
+
+// $type: string 
+// $size: string
+@mixin define-font-size($type, $size) {
+    @if $type == title {
+        @if $size == h1 {
+            @include define-clamp-font-size(24px, 5vw, 48px);
+            @include define-font-weight(700)
+        }
+        @else if $size == h2 {
+            @include define-clamp-font-size(16px, 4vw, 32px);
+            @include define-font-weight(600)
+        }
+        @else if $size == h3 {
+            @include define-clamp-font-size(8px, 3vw , 24px);
+            @include define-font-weight(500)
+        }
+        @else if $size == h4 {
+            @include define-clamp-font-size(6px, 2vw , 16px);
+            @include define-font-weight(500)
+        }
+        @else if $size == h5 {
+            @include define-clamp-font-size(8px, 1vw , 14px);
+            @include define-font-weight(500)
+        }
+    }
+    @else if $type == paragraph {
+        @if $size == sm {
+            @include define-clamp-font-size(8px, 5vw , 24px);
+            @include define-font-weight(300)
+        }
+        @else if $size == m {
+            @include define-clamp-font-size(16px, 5vw, 32px);
+            @include define-font-weight(400)
+        }
+        @else if $size == l {
+            @include define-clamp-font-size(24px, 5vw, 48px);
+        }
+    }
+}
+
+// $type: string
+// $light-theme: bool
+@mixin toggle-color-theme($type, $light-theme) {
+    @if $type == el {
+        @if $light-theme {
+            background-color: vars.$color-light-bg;
+            color: vars.$color-dark-text;
+        } @else {
+            background-color: vars.$color-dark-bg;
+            color: vars.$color-light-text;
+        }
+    }
+    @else if $type == title {
+        @if $light-theme {
+            color: vars.$color-dark-text;
+        } @else {
+            color: vars.$color-light-text;
+        }
+    }
+}
+
+// $clamp: number
+@mixin define-line-clamp($clamp) {
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
