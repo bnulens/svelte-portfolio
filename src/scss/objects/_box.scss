@@ -1,0 +1,17 @@
+@use '../tools/index' as *;
+
+.o-outer-wrapper {
+    @include define-box-dimension(100vw, 100vh);
+    
+    &.is-light {
+        @include define-full-width-background(true, 100%, 100%, -5);
+    }
+    &.is-dark {
+        @include define-full-width-background(false, 100%, 100%, -5);
+    }
+}
+
+.o-inner-wrapper {
+    @include define-threshold;
+}
+
