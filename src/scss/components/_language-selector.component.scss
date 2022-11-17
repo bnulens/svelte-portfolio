@@ -1,0 +1,21 @@
+// @use "../tools/index" as *;
+
+.c-language-selector.outer-wrapper {
+    position: relative;
+    
+    .c-language-selector.inner-wrapper {
+        .c-language-selector.button {
+            height: clamp(30px, 5vw, 60px);
+            width: auto;
+            border: none;
+            border-radius: 50%;
+            background-color: transparent;
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
