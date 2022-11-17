@@ -1,0 +1,121 @@
+@use "./font.mixins" as *;
+
+@mixin define-threshold {
+    max-width: 95%;
+    margin: 0 auto;
+    
+    @media only screen and (min-width: 1080px) {
+        max-width: 1080px;
+    }
+}
+
+@mixin define-absolute-centered {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+// $width: number in px | vw
+// $height: number in px | vh
+@mixin define-box-dimension($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// $width: number in px | vw | %
+@mixin define-clamp($orientation, $min, $pref, $max) {
+    @if $orientation == width {
+        width: clamp($min, $pref, $max);
+    }
+    @else if $orientation == height {
+        height: clamp($min, $pref, $max);
+    }
+}
+ 
+// $theme: bool
+// $bg-width: number in px | vw | %
+// $bg-height: number in px | vh | %
+// $bg-zindex: +/- number
+@mixin define-full-width-background($theme, $bg-width, $bg-height, $bg-zindex) {
+    ::after {
+        content: "";
+        z-index: $bg-zindex;
+        
+        @include define-absolute-centered;
+        @include define-box-dimension($bg-width, $bg-height);
+        @include toggle-color-theme(el, $theme);
+    }
+}
+
+// $vertical: number in px | vw | vh | %
+// $horizontal: number in px | vw | vh | %
+@mixin define-simple-padding($vertical, $horizontal) {
+    padding: $vertical $horizontal;
+}
+
+// $top: number in px | vw | vh | %
+// $sides: number in px | vw | vh | %
+// $bottom: number in px | vw | vh | %
+@mixin define-specific-padding($top, $sides, $bottom) {
+    padding: $top $sides $bottom;
+}
+
+// $orientation: string
+// $top: number in px | vw | vh | %
+// $right: number in px | vw | vh | %
+// $bottom: number in px | vw | vh | %
+// $left: number in px | vw | vh | %
+@mixin define-all-padding($orientation, $top, $right, $bottom, $left) {
+    @if $orientation == all {
+        padding: $top, $right, $bottom, $left;
+    }
+    @else if $orientation == top {
+        padding-top: $top;
+    }
+    @else if $orientation == right {
+        padding-right: $right;
+    }
+    @else if $orientation == bottom {
+        padding-bottom: $bottom;
+    }
+    @else if $orientation == left {
+        padding-left: $left;
+    }
+}
+
+// $vertical: number in px | vw | vh | %
+// $horizontal: number in px | vw | vh | %
+@mixin define-simple-margin($vertical, $horizontal) {
+    margin: $vertical $horizontal;
+}
+
+// $top: number in px | vw | vh | %
+// $sides: number in px | vw | vh | %
+// $bottom: number in px | vw | vh | %
+@mixin define-specific-margin($top, $sides, $bottom) {
+    margin: $top $sides $bottom;
+}
+
+// $orientation: string
+// $top: number in px | vw | vh | %
+// $right: number in px | vw | vh | %
+// $bottom: number in px | vw | vh | %
+// $left: number in px | vw | vh | %
+@mixin define-all-margin($orientation, $top, $right, $bottom, $left) {
+    @if $orientation == all {
+        margin: $top, $right, $bottom, $left;
+    }
+    @else if $orientation == top {
+        margin-top: $top;
+    }
+    @else if $orientation == right {
+        margin-right: $right;
+    }
+    @else if $orientation == bottom {
+        margin-bottom: $bottom;
+    }
+    @else if $orientation == left {
+        margin-left: $bottom;
+    }
+}
