@@ -5,8 +5,8 @@
   import PhoneLink from "./Socials/PhoneLink.svelte";
 </script>
 
-<div class="summary outer-wrapper closed">
-  <div class="summary inner-wrapper">
+<div class="o-outer-wrapper">
+  <div class="o-inner-wrapper">
     <div class="summary header">
       <div class="summary heading-wrapper">
         <div class="summary heading">

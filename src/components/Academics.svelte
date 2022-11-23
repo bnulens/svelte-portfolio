@@ -64,8 +64,10 @@
   };
 </script>
 
-<section class="academics outer-wrapper">
-  <div class=" academics inner-wrapper">
-    <TopicsCard {cardContent} name="academics" />
+<section class="c-academics">
+  <div class="o-outer-wrapper">
+    <div class="o-inner-wrapper">
+      <TopicsCard {cardContent} name="academics" />
+    </div>
   </div>
 </section>
