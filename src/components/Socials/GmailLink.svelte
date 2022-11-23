@@ -1,5 +1,5 @@
-<div class="social-link outer-wrapper">
-  <div class="social-link outer-wrapper">
+<div class="c-social-link outer-wrapper">
+  <div class="c-social-link inner-wrapper">
     <a
       href="mailto:brechtnulens@gmail.com"
       target="_blank"

@@ -1,0 +1,17 @@
+@use "../tools/index" as *;
+
+.c-social-link.outer-wrapper {
+    position: relative;
+    
+    .c-social-link.inner-wrapper {
+
+        a {
+            display: block;
+            @include define-clamp-box-aspect-ratio(all, 18px, 4vw, 24px, 1, 1);
+
+            img {
+                display: block;
+            }
+        }
+    }
+}
