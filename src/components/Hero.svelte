@@ -1,5 +1,6 @@
 <script>
   import LanguageSelector from "./LanguageSelector.svelte";
+  import Puzzle from "./Puzzle/Puzzle.svelte";
 </script>
 
 <section class="c-hero has-expandable is-closed">
@@ -25,7 +26,7 @@
             </div>
           </div>
           <div class="content-right">
-            <span>Stan the span</span>
+            <Puzzle />
           </div>
         </div>
       </div>
