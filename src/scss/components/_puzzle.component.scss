@@ -1,0 +1,65 @@
+@use "../tools/index" as *;
+
+.c-puzzle {
+    position: absolute;
+    top: 20%;
+    right: 0;
+
+    @include define-clamp-box-aspect-ratio(all, 250px, 35vw, 500px, 1, 1);
+
+    .c-puzzle-grid-wrapper {
+        position: relative;
+        height: 100%;
+
+        .c-puzzle-grid {
+          position: relative;
+          display: grid;
+          height: 100%;
+    
+    
+          .c-puzzle-tile {
+            display: block;
+            background-color: white;
+            border: 1px dotted black;
+            text-align: center;
+            
+            &.blank {
+                background-color: transparent !important;
+            }
+          }
+    
+            &.small {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                height: 100%;
+            }
+            &.medium {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                height: 100%;
+            }
+            &.large {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                height: 100%;
+            }
+            &.huge {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                height: 100%;
+            }
+        }
+
+    }
+    .c-puzzle-actions {
+        position: absolute;
+        display: flex;
+        align-items: center;
+
+        @include define-simple-padding(12px, 0px);
+
+        button {
+            @include define-simple-margin(0px, 4px);
+        }
+    }
+  }
