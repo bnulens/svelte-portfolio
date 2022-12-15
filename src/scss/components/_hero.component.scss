@@ -12,27 +12,30 @@
 
     .o-space {
         position: relative;
+        display: flex;
+        align-items: center;
+
         @include define-box-dimension(auto, 90vh);
-    
+        
         .o-content-wrapper {
             display: flex;
+            flex-direction: column-reverse;
             align-items: center;
             justify-content: space-between;
             margin: 0 auto;
-        
-            @include define-simple-padding(35vh, 15vw);
-    
+
+            @include define-box-dimension(95%, 70%);
+            
+
             .o-content-left-wrapper {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
     
                 .o-content-left {
+                    max-width: 360px;
+                    max-height: 220px;
                     
                     .o-content-left.text {
                         display: flex;
                         flex-direction: column;
-                        width: 60%;
     
                         p {
                             line-height: 1.2em;
@@ -40,11 +43,12 @@
                             border-bottom: 1px solid grey;
                             margin-bottom: 6px;
 
-                            @include define-font-size(text, m);
+                            @include define-font-size(paragraph, s);
                             @include define-specific-padding(6px, 0px, 18px);
                         }
                         
                         .o-content-left.buttons {
+                            display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                             width: 50%;
@@ -55,6 +59,38 @@
                     }
                 }
             }
+
+            @media only screen and (min-width: 768px) {
+                flex-direction: row;
+
+                @include define-box-dimension(75%, 100%);
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            height: 85vh;
+        }
+    }
+
+    .o-profile-nav-wrapper {
+        height: 10vh;
+        width: 65%;
+        margin: 0 auto;
+
+        @include define-box-dimension(65%, 10vh);
+
+
+        .o-profile-nav {
+            display: flex;
+            justify-content: space-between;
+
+            .o-profile-nav-item {
+                @include define-font-size(paragraph, xs);
+            }
+        }
+
+        @media only screen and (max-width: 380px) {
+            height: 15vh;
+            width: 95%;
         }
     }
 }
