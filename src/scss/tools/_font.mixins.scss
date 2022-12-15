@@ -38,8 +38,12 @@
         }
     }
     @else if $type == paragraph {
-        @if $size == sm {
-            @include define-clamp-font-size(8px, 5vw , 24px);
+        @if $size == xs {
+            @include define-clamp-font-size(6px, 5vw , 14px);
+            @include define-font-weight(300)
+        }
+        @if $size == s {
+            @include define-clamp-font-size(8px, 5vw , 20px);
             @include define-font-weight(300)
         }
         @else if $size == m {
@@ -48,6 +52,9 @@
         }
         @else if $size == l {
             @include define-clamp-font-size(24px, 5vw, 48px);
+        }
+        @else if $size == xl {
+            @include define-clamp-font-size(32px, 5vw, 56px);
         }
     }
 }
