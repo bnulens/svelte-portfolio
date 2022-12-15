@@ -1,11 +1,7 @@
 @use "../tools/index" as *;
 
 .c-puzzle {
-    position: absolute;
-    top: 20%;
-    right: 0;
-
-    @include define-clamp-box-aspect-ratio(all, 250px, 35vw, 500px, 1, 1);
+    @include define-clamp-box-aspect-ratio(all, 240px, 35vw, 360px, 1, 1);
 
     .c-puzzle-grid-wrapper {
         position: relative;
@@ -15,13 +11,19 @@
           position: relative;
           display: grid;
           height: 100%;
+          gap: 2px;
     
     
           .c-puzzle-tile {
             display: block;
-            background-color: white;
-            border: 1px dotted black;
             text-align: center;
+            
+            img {
+                object-fit: fill;
+                height: 100%;
+                width: 100%;
+                aspect-ratio: 1;
+            }
             
             &.blank {
                 background-color: transparent !important;
