@@ -25,17 +25,17 @@
               </div>
             </div>
           </div>
-          <div class="content-right">
+          <div class="o-content-right">
             <Puzzle />
           </div>
         </div>
       </div>
-      <div class="profile-nav-wrapper">
-        <nav class="profile-nav">
-          <a href="#" class="profile-nav-item">Who am I</a>
-          <a href="#" class="profile-nav-item">Projects</a>
-          <a href="#" class="profile-nav-item">Academics</a>
-          <a href="#" class="profile-nav-item">Career</a>
+      <div class="o-profile-nav-wrapper">
+        <nav class="o-profile-nav">
+          <a href="/" class="o-profile-nav-item">Who am I</a>
+          <a href="/" class="o-profile-nav-item">Projects</a>
+          <a href="/" class="o-profile-nav-item">Academics</a>
+          <a href="/" class="o-profile-nav-item">Career</a>
         </nav>
       </div>
     </div>
