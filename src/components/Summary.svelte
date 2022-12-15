@@ -37,7 +37,7 @@
             <div class="contact-bar nav-item">
               <a
                 href="https://www.linkedin.com/in/brecht-nulens/"
-                rel="noopener noreferer"
+                rel="noopener noreferrer"
                 target="_blank"><LinkedInLink /></a
               >
             </div>
