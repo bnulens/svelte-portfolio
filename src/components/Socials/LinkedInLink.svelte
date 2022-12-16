@@ -1,3 +1,7 @@
+<script>
+  import { toggleViewMode as viewMode } from "../../scripts/pageStore";
+</script>
+
 <div class="c-social-link outer-wrapper">
   <div class="c-social-link inner-wrapper">
     <a
@@ -5,7 +9,12 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src="src/assets/icons/linkedin-dark.svg" alt="linkedin-link" />
+      <img
+        src="src/assets/icons/{$viewMode ? 'light' : 'dark'}/linkedin-{$viewMode
+          ? 'light'
+          : 'dark'}.svg"
+        alt="linkedin-link"
+      />
     </a>
   </div>
 </div>
