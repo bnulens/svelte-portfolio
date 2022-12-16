@@ -1,0 +1,55 @@
+@use '../../tools/index' as *;
+
+.c-page-btn {
+    max-width: fit-content;
+
+    &.wrapper {
+        position: relative;
+
+        .o-btn {
+            border: none;
+            cursor: pointer;
+            background-color: transparent;
+            
+            &.toggle {
+                background-color: transparent;
+            }
+            &.lang-selector {
+                background-color: transparent;
+            }
+
+            // Size
+            &.small {
+                width: 30px;
+            }
+            &.medium {
+                width: 60px;
+            }
+            &.large {
+                width: 80px;
+            }
+        
+            // Shape
+            &.round {
+                border-radius: 50%;
+                height: auto;
+                aspect-ratio: 1;
+            }
+            &.square {
+                height: auto;
+                aspect-ratio: 1;
+            }
+            &.rect {
+                aspect-ratio: 1.6;
+            }
+
+            // Internal image or icon
+            .o-btn-icon {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+    }
+}
