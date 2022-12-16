@@ -23,20 +23,6 @@
     height: $height;
 }
 
-// $width: number in px | vw | %
-@mixin define-box-clamp($orientation, $min, $pref, $max) {
-    @if $orientation == width {
-        width: clamp($min, $pref, $max);
-    }
-    @else if $orientation == height {
-        height: clamp($min, $pref, $max);
-    }
-    @else if $orientation == all {
-        width: clamp($min, $pref, $max);
-        height: clamp($min, $pref, $max);
-    }
-}
- 
 // $theme: bool
 // $bg-width: number in px | vw | %
 // $bg-height: number in px | vh | %
@@ -128,6 +114,20 @@
 // $yR: number
 @mixin define-box-aspect-ratio($xR, $yR) {
     aspect-ratio: $xR / $yR;
+}
+
+// $width: number in px | vw | %
+@mixin define-box-clamp($orientation, $min, $pref, $max) {
+    @if $orientation == width {
+        width: clamp($min, $pref, $max);
+    }
+    @else if $orientation == height {
+        height: clamp($min, $pref, $max);
+    }
+    @else if $orientation == all {
+        width: clamp($min, $pref, $max);
+        height: clamp($min, $pref, $max);
+    }
 }
 
 // $orientation: string
