@@ -1,16 +1,15 @@
 import { writable } from "svelte/store";
 
+export const solvedArray = writable(null);
 export const puzzleSize = writable(9);
 export const puzzleArray = writable([]);
+export const puzzleMetaData = writable(null);
 export const isPlayingPuzzle = writable(false);
+export const isPuzzleSolved = writable(false);
 
 export const generateGridArray = (gridSize) => {
-  puzzleArray.update((n) => {
-    let nums = new Set();
-    while (nums.size < gridSize) {
-      nums.add(Math.floor(Math.random() * gridSize));
-    }
-    n = Array.from(nums);
-    return n;
-  });
+  const _solvedArray = [...Array(gridSize).keys()];
+  solvedArray.set(JSON.stringify(_solvedArray));
+  const shuffledArray = _solvedArray.sort(() => Math.random() - 0.5);
+  puzzleArray.set(shuffledArray);
 };
