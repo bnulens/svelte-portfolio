@@ -1,9 +1,10 @@
 <script>
-  import LanguageSelector from "./LanguageSelector.svelte";
-  import Puzzle from "./Puzzle/Puzzle.svelte";
+  import { toggleViewMode, toggleResume } from "../../scripts/pageStore";
+  import LanguageSelector from "../LanguageSelector.svelte";
+  import Puzzle from "../Puzzle/Puzzle.svelte";
 </script>
 
-<section class="c-hero has-expandable is-closed">
+<section class="c-hero">
   <div class="o-outer-wrapper is-light">
     <div class="o-inner-wrapper ">
       <div class="o-space">

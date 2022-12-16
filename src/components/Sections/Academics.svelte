@@ -1,5 +1,5 @@
 <script>
-  import TopicsCard from "./TopicsCard.svelte";
+  import TopicsCard from "../TopicsCard.svelte";
 
   let cardContent = {
     title: "Academics",

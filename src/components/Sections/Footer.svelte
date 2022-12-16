@@ -1,8 +1,8 @@
 <script>
-  import GithubLink from "./Socials/GithubLink.svelte";
-  import LinkedInLink from "./Socials/LinkedInLink.svelte";
-  import GmailLink from "./Socials/GmailLink.svelte";
-  import PhoneLink from "./Socials/PhoneLink.svelte";
+  import GithubLink from "../Socials/GithubLink.svelte";
+  import LinkedInLink from "../Socials/LinkedInLink.svelte";
+  import GmailLink from "../Socials/GmailLink.svelte";
+  import PhoneLink from "../Socials/PhoneLink.svelte";
 </script>
 
 <footer class="footer outer-wrapper">
