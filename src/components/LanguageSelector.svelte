@@ -1,7 +1,14 @@
-<div class="c-language-selector outer-wrapper">
-  <div class="c-language-selector inner-wrapper">
-    <button class="c-language-selector button">
-      <img src="src/assets/icons/language-dark.svg" alt="language-icon" />
-    </button>
-  </div>
+<script>
+  import { toggleViewMode as viewMode } from "../scripts/pageStore";
+</script>
+
+<div class="c-page-btn wrapper">
+  <button class="o-btn medium square lang-selector">
+    <img
+      src="src/assets/icons/{viewMode ? 'dark' : 'light'}/language-{viewMode
+        ? 'dark'
+        : 'light'}.svg"
+      alt="language-icon"
+    />
+  </button>
 </div>
