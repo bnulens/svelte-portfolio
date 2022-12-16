@@ -1,13 +1,11 @@
 @use "../tools/index" as *;
 
 .c-hero {
-    &.has-expandable {
-        &.is-open {
-            overflow-y: scroll;
-        }
-        &.is-closed {
-            overflow-y: hidden;
-        }
+    &.is-open {
+        overflow-y: scroll;
+    }
+    &.is-closed {
+        overflow-y: hidden;
     }
 
     .o-space {
