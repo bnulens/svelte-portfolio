@@ -3,7 +3,6 @@ import { writable } from "svelte/store";
 export const solvedArray = writable(null);
 export const puzzleSize = writable(9);
 export const puzzleArray = writable([]);
-export const puzzleMetaData = writable(null);
 export const isPlayingPuzzle = writable(false);
 export const isPuzzleSolved = writable(false);
 
