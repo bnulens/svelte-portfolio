@@ -2,17 +2,26 @@
 
 .c-puzzle {
     @include define-clamp-box-aspect-ratio(all, 240px, 35vw, 360px, 1, 1);
-
+    
     .c-puzzle-grid-wrapper {
         position: relative;
         height: 100%;
-
+        
         .c-puzzle-grid {
-          position: relative;
-          display: grid;
-          height: 100%;
-          gap: 2px;
-    
+            position: relative;
+            display: grid;
+            height: 100%;
+            gap: 2px;
+            
+            .c-puzzle-grid-image {
+                position: relative;
+
+                &.img {
+                    display: block;
+                    background-color:  orange;
+                    @include define-clamp-box-aspect-ratio(all, 240px, 35vw, 360px, 1, 1);
+                }
+            }
     
           .c-puzzle-tile {
             display: block;
