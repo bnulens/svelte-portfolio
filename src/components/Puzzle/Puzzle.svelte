@@ -41,12 +41,7 @@
           </div>
         {:else}
           {#each $puzzleArray as tile, index}
-            <PuzzleTile
-              tileValue={tile}
-              puzzleSizeValue={$puzzleSize}
-              {puzzleSizeString}
-              {index}
-            />
+            <PuzzleTile tileValue={tile} {puzzleSizeString} {index} />
           {/each}
         {/if}
       </div>
