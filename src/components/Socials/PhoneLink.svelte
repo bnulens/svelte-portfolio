@@ -1,14 +1,14 @@
 <script>
-  import { toggleViewMode as viewMode } from "../../scripts/pageStore";
+  import { settings } from "../../scripts/pageStore";
 </script>
 
 <div class="c-social-link outer-wrapper">
   <div class="c-social-link inner-wrapper">
     <a href="tel:+32494749731" rel="noopener noreferrer">
       <img
-        src="src/assets/icons/{$viewMode
+        src="src/assets/icons/{$settings.isDarkMode
           ? 'light'
-          : 'dark'}/telephone-{$viewMode ? 'light' : 'dark'}.svg"
+          : 'dark'}/telephone-{$settings.isDarkMode ? 'light' : 'dark'}.svg"
         alt="phone-link"
       />
     </a>

@@ -1,5 +1,5 @@
 <script>
-  import { toggleViewMode as viewMode } from "../../scripts/pageStore";
+  import { settings } from "../../scripts/pageStore";
 </script>
 
 <div class="c-social-link outer-wrapper">
@@ -10,9 +10,9 @@
       rel="noopener noreferrer"
     >
       <img
-        src="src/assets/icons/{$viewMode ? 'light' : 'dark'}/mail-{$viewMode
+        src="src/assets/icons/{$settings.isDarkMode
           ? 'light'
-          : 'dark'}.svg"
+          : 'dark'}/mail-{$settings.isDarkMode ? 'light' : 'dark'}.svg"
         alt="gmail-link"
       />
     </a>
