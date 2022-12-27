@@ -1,2 +1,79 @@
 @use '../tools/index' as *;
 
+.btn-txt {
+    &.is-light {
+        
+    }
+    &.is-dark {
+
+    }
+    &.xs {
+        @include define-font-size(paragraph, xs)
+    }
+    &.s {
+        @include define-font-size(paragraph, s)
+    }
+    &.m {
+        @include define-font-size(paragraph, m)
+    }
+    &.l {
+        @include define-font-size(paragraph, l)
+    }
+    &.xl {
+        @include define-font-size(paragraph, xl)
+    }
+}
+
+.line-txt {
+    &.is-light {
+        
+    }
+    &.is-dark {
+
+    }
+    // Font size
+    &.xs {
+        @include define-font-size(paragraph, xs)
+    }
+    &.s {
+        @include define-font-size(paragraph, s)
+    }
+    &.m {
+        @include define-font-size(paragraph, m)
+    }
+    &.l {
+        @include define-font-size(paragraph, l)
+    }
+    &.xl {
+        @include define-font-size(paragraph, xl)
+    }
+    // Text alignment
+    &.tal-justify {
+        text-align: justify;
+    }
+    &.tal-center {
+        text-align: center;
+    }
+    &.tal-end {
+        text-align: end;
+    }
+    &.tal-left {
+        text-align: end;
+    }
+    // Line height
+    &.lh-xs {
+        @include define-line-height(xs);
+    }
+    &.lh-s {
+        @include define-line-height(s);
+    }
+    &.lh-m {
+        @include define-line-height(m);
+    }
+    &.lh-l {
+        @include define-line-height(l);
+    }
+    &.lh-xl {
+        @include define-line-height(xl);
+    }
+}
