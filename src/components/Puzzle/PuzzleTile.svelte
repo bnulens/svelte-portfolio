@@ -1,4 +1,5 @@
 <script>
+  export let puzzleSize;
   export let puzzleSizeString;
   export let tileValue;
   export let index;
@@ -11,14 +12,16 @@
 
   const checkIfCorrect = () => {
     if (JSON.stringify($puzzleArray) === $solvedArray) {
-      isPuzzleSolved.set(true);
+      setTimeout(() => {
+        isPuzzleSolved.set(true);
+      }, 2000);
     }
   };
 
   const switchTiles = () => {
     let newArray = [...$puzzleArray];
 
-    // Blank tile is always the last entry of the solved puzzleArray
+    // Blank tile is always the highest value of the solved puzzleArray
     // Potential values 9 - 16 - 25
     const blankTileIndex = newArray.indexOf(newArray.length);
     // Swap out values:
@@ -34,7 +37,7 @@
 </script>
 
 <div class="c-puzzle-tile">
-  {#if tileValue === 0}
+  {#if tileValue === puzzleSize}
     <span />
   {:else}
     <img
@@ -42,7 +45,7 @@
       src={`src/assets/images/puzzle/${puzzleSizeString}/${tileValue}.jpg`}
       alt="puzzle-piece"
       on:click={switchTiles}
-      on:keydown={switchTiles}
+      on:keypress={switchTiles}
     />
   {/if}
 </div>
