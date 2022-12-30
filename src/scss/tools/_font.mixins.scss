@@ -17,44 +17,44 @@
 @mixin define-font-size($type, $size) {
     @if $type == title {
         @if $size == h1 {
-            @include define-clamp-font-size(24px, 5vw, 48px);
+            @include define-clamp-font-size(24px, 2.5vw, 48px);
             @include define-font-weight(700)
         }
         @else if $size == h2 {
-            @include define-clamp-font-size(16px, 4vw, 32px);
+            @include define-clamp-font-size(16px, 2.5vw, 32px);
             @include define-font-weight(600)
         }
         @else if $size == h3 {
-            @include define-clamp-font-size(8px, 3vw , 24px);
+            @include define-clamp-font-size(8px, 2.5vw , 24px);
             @include define-font-weight(500)
         }
         @else if $size == h4 {
-            @include define-clamp-font-size(6px, 2vw , 16px);
+            @include define-clamp-font-size(6px, 2.5vw , 16px);
             @include define-font-weight(500)
         }
         @else if $size == h5 {
-            @include define-clamp-font-size(8px, 1vw , 14px);
+            @include define-clamp-font-size(8px, 2.5vw , 14px);
             @include define-font-weight(500)
         }
     }
     @else if $type == paragraph {
         @if $size == xs {
-            @include define-clamp-font-size(6px, 5vw , 14px);
+            @include define-clamp-font-size(6px, 2.5vw , 14px);
             @include define-font-weight(300)
         }
         @if $size == s {
-            @include define-clamp-font-size(8px, 5vw , 20px);
+            @include define-clamp-font-size(8px, 2.5vw , 20px);
             @include define-font-weight(300)
         }
         @else if $size == m {
-            @include define-clamp-font-size(16px, 5vw, 32px);
+            @include define-clamp-font-size(16px, 2.5vw, 32px);
             @include define-font-weight(400)
         }
         @else if $size == l {
-            @include define-clamp-font-size(24px, 5vw, 48px);
+            @include define-clamp-font-size(24px, 2.5vw, 48px);
         }
         @else if $size == xl {
-            @include define-clamp-font-size(32px, 5vw, 56px);
+            @include define-clamp-font-size(32px, 2.5vw, 56px);
         }
     }
 }
@@ -86,4 +86,23 @@
     -webkit-line-clamp: $clamp;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+// $size: number in em
+@mixin define-line-height($size) {
+    @if $size == xs {
+        line-height: 0.6em;
+    }
+    @if $size == s {
+        line-height: 0.8em;
+    }
+    @else if $size == m {
+        line-height: 1em;
+    }
+    @else if $size == l {
+        line-height: 1.2em;
+    }
+    @else if $size == xl {
+        line-height: 1.4em;
+    }
 }
