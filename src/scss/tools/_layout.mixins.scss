@@ -56,7 +56,7 @@
 // $right: number in px | vw | vh | %
 // $bottom: number in px | vw | vh | %
 // $left: number in px | vw | vh | %
-@mixin define-all-padding($orientation, $top, $right, $bottom, $left) {
+@mixin define-all-padding($orientation, $top, $right: $top, $bottom: $top, $left: $top) {
     @if $orientation == all {
         padding: $top, $right, $bottom, $left;
     }
@@ -74,6 +74,22 @@
     }
 }
 
+// $orientation: string
+// $value: number in px | vw | vh | %
+@mixin define-single-margin($orientation, $value) {
+    @if $orientation == top {
+        margin-top: $value;
+    }
+    @else if $orientation == right {
+        margin-right: $value;
+    }
+    @else if $orientation == bottom {
+        margin-bottom: $value;
+    }
+    @else if $orientation == left {
+        margin-left: $value;
+    }
+}
 // $vertical: number in px | vw | vh | %
 // $horizontal: number in px | vw | vh | %
 @mixin define-simple-margin($vertical, $horizontal) {
@@ -92,7 +108,7 @@
 // $right: number in px | vw | vh | %
 // $bottom: number in px | vw | vh | %
 // $left: number in px | vw | vh | %
-@mixin define-all-margin($orientation, $top, $right, $bottom, $left) {
+@mixin define-all-margin($orientation, $top, $right: $top, $bottom: $top, $left: $top) {
     @if $orientation == all {
         margin: $top, $right, $bottom, $left;
     }
@@ -139,4 +155,30 @@
 @mixin define-clamp-box-aspect-ratio($orientation, $min, $pref, $max, $xR, $yR) {
     @include define-box-clamp($orientation, $min, $pref, $max);
     aspect-ratio: $xR / $yR;
+}
+
+// $orientation: string
+// $value: number in px
+// $color: hsl
+// $style: string - default 'solid'
+@mixin define-single-border($orientation, $value, $color, $style: solid) {
+    @if $orientation == top {
+        border-top: $value $color $style;
+    }
+    @else if $orientation == right {
+        border-right: $value $color $style;
+    }
+    @else if $orientation == bottom {
+        border-bottom: $value $color $style;
+    }
+    @else if $orientation == left {
+        border-left: $value $color $style;
+    }
+}
+
+// $value: number in px
+// $color: hsl
+// $style: string - default 'solid'
+@mixin define-all-border($value,  $color, $style: solid) {
+    border: $value, $color, $style;
 }
