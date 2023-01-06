@@ -1,11 +1,12 @@
 <script>
-  export let allLanguages;
+  export let locales;
+  export let isSelectorExpanded;
   import LanguageOption from "./LanguageOption.svelte";
 </script>
 
-<div class="c-lang-selector">
+<div class="c-lang-selector {isSelectorExpanded ? 'is-closed' : 'is-open'}">
   <ul class="o-lang-selector lang-list">
-    {#each allLanguages as lang}
+    {#each locales as lang}
       <LanguageOption {lang} />
     {/each}
   </ul>
