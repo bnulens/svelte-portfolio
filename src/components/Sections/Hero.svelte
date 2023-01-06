@@ -1,5 +1,6 @@
 <script>
-  // import { toggleViewMode, toggleResume } from "../../scripts/pageStore";
+  import { t } from "../../i18n/i18n";
+
   import LanguageButton from "../LanguageSelector/LanguageButton.svelte";
   import Puzzle from "../Puzzle/Puzzle.svelte";
 </script>
@@ -10,12 +11,9 @@
       <div class="o-space">
         <div class="o-content-wrapper">
           <div class="o-content-left">
-            <h1 class="e-main-title">Generic Title</h1>
+            <h1 class="e-main-title">{$t("content.hero.title")}</h1>
             <p class="line-txt s tal-justify lh-xl">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
-              cupiditate voluptatum veritatis autem sed sequi nihil minus
-              expedita voluptatibus pariatur, alias dicta obcaecati amet
-              repellendus repudiandae, dolore ipsa id tenetur.
+              {$t("content.hero.sub_title")}
             </p>
             <div class="o-content-left buttons">
               <LanguageButton />
