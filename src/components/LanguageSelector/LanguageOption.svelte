@@ -1,22 +1,13 @@
 <script>
   export let lang;
-  import { settings } from "../../scripts/pageStore";
+  import { settings, translateLangToName } from "../../scripts/pageStore";
 
-  let langString;
   $: prefLang = $settings.language.preferredLanguage;
-
-  lang === "en"
-    ? (langString = "English")
-    : lang === "nl"
-    ? (langString = "Nederlands")
-    : lang === "fr"
-    ? (langString = "Français")
-    : lang === "es"
-    ? (langString = "Español")
-    : (langString = "en");
+  $: isSelectorExpanded = $settings.language.isSelectorExpanded;
 
   const selectLanguage = (lang) => {
     settings.selectLanguage(lang);
+    settings.toggleLangSelector(!isSelectorExpanded);
   };
 </script>
 
@@ -29,6 +20,6 @@
       src="src/assets/icons/countries/{lang}.svg"
       alt="country-icon"
     />
-    <p class="o-lang-option name">{langString}</p>
+    <p class="o-lang-option name">{translateLangToName(lang)}</p>
   </li>
 </div>
