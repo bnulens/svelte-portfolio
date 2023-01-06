@@ -1,26 +1,7 @@
 <script>
-  import { onMount } from "svelte";
-  import { each } from "svelte/internal";
-
   export let cardContent;
 
   let { title, topics, info } = cardContent;
-
-  // const switchSelectedTopic = (e) => {
-  //   // e.target.innerHTML = topic;
-  //   let target = e.target.parentNode.classList;
-  //   target.add("selected");
-  //   console.log(target);
-  // };
-
-  // const [topic, selectTopic] = ["", switchSelectedTopic];
-
-  // onMount(() => {
-  //   console.log(document.getElementsByClassName("topicscard list-item"));
-  //   let topicPoints = [
-  //     ...document.getElementsByClassName("topicscard list-item"),
-  //   ];
-  // });
 </script>
 
 <section class="topicscard section">
