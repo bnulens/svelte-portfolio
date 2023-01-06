@@ -1,8 +1,5 @@
 import { writable } from "svelte/store";
 
-let languages = "en,nl,fr,es";
-export const allLanguages = languages.split(",");
-
 const pageSettings = () => {
   const { subscribe, set, update } = writable({
     isResumeExpanded: false,
@@ -42,3 +39,19 @@ const pageSettings = () => {
 };
 
 export const settings = pageSettings();
+
+export const translateLangToName = (prefLang) => {
+  let langString;
+
+  prefLang === "en"
+    ? (langString = "English")
+    : prefLang === "nl"
+    ? (langString = "Nederlands")
+    : prefLang === "fr"
+    ? (langString = "Français")
+    : prefLang === "es"
+    ? (langString = "Español")
+    : (langString = "en");
+
+  return langString;
+};
