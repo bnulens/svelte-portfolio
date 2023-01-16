@@ -1,6 +1,6 @@
 <script>
-  import { settings, translateLangToName } from "../../scripts/pageStore";
-  import { locales } from "../../i18n/i18n";
+  import { settings } from "../../scripts/pageStore";
+  import { t, locales } from "../../i18n/i18n";
   import LanguageSelector from "./LanguageSelector.svelte";
 
   $: prefLang = $settings.language.preferredLanguage;
@@ -20,7 +20,7 @@
         alt="country-flag"
       />
       <p class="btn-text sm">
-        {translateLangToName(prefLang)}
+        {$t("utils.buttons.lang")}
       </p>
     </button>
   </div>
