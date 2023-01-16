@@ -129,7 +129,7 @@
 // $xR: number
 // $yR: number
 @mixin define-box-aspect-ratio($xR, $yR) {
-    aspect-ratio: $xR / $yR;
+    aspect-ratio: calc($xR / $yR);
 }
 
 // $width: number in px | vw | %
@@ -154,7 +154,7 @@
 // $yR: number
 @mixin define-clamp-box-aspect-ratio($orientation, $min, $pref, $max, $xR, $yR) {
     @include define-box-clamp($orientation, $min, $pref, $max);
-    aspect-ratio: $xR / $yR;
+    aspect-ratio: calc($xR / $yR);
 }
 
 // $orientation: string
