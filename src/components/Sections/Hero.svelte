@@ -2,6 +2,7 @@
   import { t } from "../../i18n/i18n";
 
   import LanguageButton from "../LanguageSelector/LanguageButton.svelte";
+  import ToggleResume from "../PageButtons/ToggleResume.svelte";
   import Puzzle from "../Puzzle/Puzzle.svelte";
 </script>
 
@@ -17,7 +18,7 @@
             </p>
             <div class="o-content-left buttons">
               <LanguageButton />
-              <button>short version</button>
+              <ToggleResume />
             </div>
           </div>
         </div>
@@ -28,10 +29,18 @@
     </div>
     <div class="o-profile-nav-wrapper">
       <nav class="o-profile-nav">
-        <a href="/" class="o-profile-nav-item">Who am I</a>
-        <a href="/" class="o-profile-nav-item">Projects</a>
-        <a href="/" class="o-profile-nav-item">Academics</a>
-        <a href="/" class="o-profile-nav-item">Career</a>
+        <a href="/" class="o-profile-nav-item"
+          >{$t("content.navigation.link_1")}</a
+        >
+        <a href="/" class="o-profile-nav-item"
+          >{$t("content.navigation.link_2")}</a
+        >
+        <a href="/" class="o-profile-nav-item"
+          >{$t("content.navigation.link_3")}</a
+        >
+        <a href="/" class="o-profile-nav-item"
+          >{$t("content.navigation.link_4")}</a
+        >
       </nav>
     </div>
   </div>
