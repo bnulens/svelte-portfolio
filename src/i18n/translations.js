@@ -7,6 +7,7 @@ export default {
         next: "Next",
         previous: "Previous",
         skip: "Short version",
+        lang: "English",
       },
     },
     content: {
@@ -102,6 +103,7 @@ export default {
         next: "Next",
         previous: "Previous",
         skip: "Short version",
+        lang: "Français",
       },
     },
     content: {
@@ -197,6 +199,7 @@ export default {
         next: "Next",
         previous: "Previous",
         skip: "Short version",
+        lang: "Español",
       },
     },
     content: {
@@ -292,6 +295,7 @@ export default {
         next: "Next",
         previous: "Previous",
         skip: "Short version",
+        lang: "Nederlands",
       },
     },
     content: {
