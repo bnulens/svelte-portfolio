@@ -1,7 +1,8 @@
 @use '../tools/index' as *;
 
 .e-main-title {
-    @include define-font-size(title, h1 );
+    @include define-clamp-font-size(12px, 10vw, 90px);
+    @include define-font-weight(700);
     
     &.is-light {
         @include toggle-color-theme(title, true);
