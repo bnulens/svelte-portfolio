@@ -1,0 +1,30 @@
+@use "../../tools/index" as *;
+
+.c-language-selector-button {
+    position: relative;
+    cursor: pointer;
+    
+    &.wrapper {
+        position: relative;
+        
+        .o-language-selector-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 12px;
+            background: transparent;
+            border: 2px solid black;
+
+            @include define-simple-padding(12px, 6px);
+            @include define-box-dimension(120px, 40px);
+            
+            > .o-language-selector.icon {
+                display: block;
+                @include define-clamp-box-aspect-ratio(all, 20px, 1vw, 40px, 1, 1);
+            }
+            > .o-language-selector.name {
+                @include define-simple-margin(12px, 6px);
+            }
+        }
+    }
+}
