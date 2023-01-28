@@ -12,49 +12,37 @@
         position: relative;
         display: flex;
         align-items: center;
+        max-width: 1080px;
+        margin: 0 auto;
 
-        @include define-box-dimension(auto, 90vh);
+        @include define-box-dimension(100%, 90vh);
         
         .o-content-wrapper {
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
             justify-content: space-between;
-            margin: 0 auto;
 
-            @include define-box-dimension(95%, 70%);
+            // @include define-box-dimension(95%, 70%);
             
+            .o-content-left {
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                max-height: 260px;
 
-            .o-content-left-wrapper {
-    
-                .o-content-left {
-                    max-width: 360px;
-                    max-height: 220px;
-                    
-                    .o-content-left.text {
-                        display: flex;
-                        flex-direction: column;
-    
-                        p {
-                            line-height: 1.2em;
-                            text-align: justify;
-                            border-bottom: 1px solid grey;
-                            margin-bottom: 6px;
+                @include define-specific-padding(6px, 0px, 18px);
+                @include define-single-margin(bottom, 6px);
 
-                            @include define-font-size(paragraph, s);
-                            @include define-specific-padding(6px, 0px, 18px);
-                        }
-                        
-                        .o-content-left.buttons {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
-                            width: 50%;
-                            margin: 0 auto;
+                .o-content-left.buttons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 50%;
+                    margin: 0 auto;
 
-                            @include define-simple-padding(12px, 0px);
-                        }
-                    }
+                    @include define-simple-padding(12px, 0px);
                 }
             }
 
@@ -71,11 +59,10 @@
 
     .o-profile-nav-wrapper {
         height: 10vh;
-        width: 65%;
+        max-width: 920px;
         margin: 0 auto;
 
         @include define-box-dimension(65%, 10vh);
-
 
         .o-profile-nav {
             display: flex;
