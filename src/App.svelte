@@ -6,11 +6,11 @@
   import Projects from "./components/Sections/Projects.svelte";
   import Footer from "./components/Sections/Footer.svelte";
   import Career from "./components/Sections/Career.svelte";
-  import ToggleViewMode from "./components/ToggleViewMode.svelte";
+
+  import { settings } from "./scripts/pageStore";
 </script>
 
 <div class="app-inner-wrapper">
-  <ToggleViewMode />
   <div class="app-bootstrap">
     <Hero />
     <Profile />
@@ -19,5 +19,7 @@
     <Academics />
     <Footer />
   </div>
-  <Summary />
+  {#if $settings.isResumeExpanded}
+    <Summary />
+  {/if}
 </div>
