@@ -1,0 +1,60 @@
+@use "../../tools/index" as *;
+
+.c-lang-selector {
+    display: block;
+    position: relative;
+    
+    .lang-list {
+        position: absolute;
+        top: 6px;
+        left: -8%;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        background-color: #ffffff;
+
+        @include define-simple-padding(6px, 6px);
+        @include define-box-dimension(140px, auto);
+        
+        .o-lang-option {
+            cursor: pointer;
+            
+            @include define-box-dimension(100%, auto);
+
+            &.is-selected {
+                background-color: black;
+            }
+            &.option {
+                &:hover {
+                    background-color: hsla(0, 0%, 50%, 0.5);
+                }
+            }
+            
+            .o-lang-item {
+                display: grid;
+                grid-template-columns: 20% 80%;
+                
+                // @include define-simple-padding(6px, 6px);
+                @include define-box-dimension(100%, 30px);
+                @include define-single-border(bottom, 1px, white, solid);
+                
+                >.lang-icon {
+                    @include define-simple-margin(auto, 0);
+                    @include define-clamp-box-aspect-ratio(width, 10px, 2vw, 24px, 1, 1);
+                }
+                >.lang-name {
+                    text-align: center;
+                    color: black;
+
+                    @include define-simple-margin(auto, 0);
+                    @include define-font-weight(300);
+
+                    &.is-highlight {
+                        color: white;
+                    }
+                }
+            }
+            
+        }
+    }
+}
