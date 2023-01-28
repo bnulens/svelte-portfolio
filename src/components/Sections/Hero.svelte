@@ -3,6 +3,7 @@
 
   import LanguageButton from "../LanguageSelector/LanguageButton.svelte";
   import ToggleResume from "../PageButtons/ToggleResume.svelte";
+  import ToggleViewMode from "../PageButtons/ToggleViewMode.svelte";
   import Puzzle from "../Puzzle/Puzzle.svelte";
 </script>
 
@@ -19,6 +20,7 @@
             <div class="o-content-left buttons">
               <LanguageButton />
               <ToggleResume />
+              <ToggleViewMode />
             </div>
           </div>
         </div>
