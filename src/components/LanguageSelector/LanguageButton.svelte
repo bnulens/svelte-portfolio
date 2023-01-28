@@ -19,7 +19,7 @@
         src="src/assets/icons/countries/{prefLang}.svg"
         alt="country-flag"
       />
-      <p class="btn-text sm">
+      <p class="o-language-selector name btn-text sm">
         {$t("utils.buttons.lang")}
       </p>
     </button>
