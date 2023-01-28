@@ -58,7 +58,10 @@
         text-align: end;
     }
     &.tal-left {
-        text-align: end;
+        text-align: left;
+    }
+    &.tal-right {
+        text-align: left;
     }
     // Line height
     &.lh-xs {
