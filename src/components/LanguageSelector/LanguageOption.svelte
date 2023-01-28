@@ -11,15 +11,19 @@
   };
 </script>
 
-<div
-  class="o-lang-option wrapper {lang === prefLang ? 'is-selected' : 'option'}"
->
-  <li class="o-lang-option" on:click={selectLanguage(lang)}>
+<div class="o-lang-option {lang === prefLang ? 'is-selected' : 'option'}">
+  <li
+    class="o-lang-item"
+    on:click={selectLanguage(lang)}
+    on:keypress={selectLanguage(lang)}
+  >
     <img
-      class="o-lang-option icon"
+      class="lang-icon"
       src="src/assets/icons/countries/{lang}.svg"
       alt="country-icon"
     />
-    <p class="o-lang-option name">{translateLangToName(lang)}</p>
+    <p class="lang-name {lang === prefLang ? 'is-highlight' : 'none'}">
+      {translateLangToName(lang)}
+    </p>
   </li>
 </div>
